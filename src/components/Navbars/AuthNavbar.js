@@ -37,7 +37,7 @@ const AdminNavbar = () => {
           <NavbarBrand to="/" tag={Link}>
             <img
               alt="..."
-              src={require("../../assets/img/brand/rms.jpeg")}
+              // src={require("../../assets/img/brand/rms.jpeg")}
             />
           </NavbarBrand>
           <button className="navbar-toggler" id="navbar-collapse-main">

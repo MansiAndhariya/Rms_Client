@@ -37,7 +37,7 @@ const UserHeader = () => {
         <Container className=" align-items-center" fluid>
           <Row>
             <Col lg="7" md="10">
-              <h1 className="display-2 text-white">Add Property</h1>
+              {/* <h1 className="display-2 text-white">Add Property</h1> */}
             </Col>
           </Row>
         </Container>

@@ -65,7 +65,7 @@ const Auth = (props) => {
                 <Col lg="5" md="6">
                   <h1 className="text-white">Welcome!</h1>
                   <p className="text-lead text-light">
-                    Please Login Here..
+                    Please Login 
                   </p>
                 </Col>
               </Row>

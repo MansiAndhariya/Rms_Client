@@ -36,10 +36,14 @@ import TextField from '@mui/material/TextField';
     const [prodropdownOpen, setproDropdownOpen] = React.useState(false);
     const [bankdropdownOpen, setbankDropdownOpen] = React.useState(false);
     const [userdropdownOpen, setuserDropdownOpen] = React.useState(false);
+    const [baddropdownOpen, setbadDropdownOpen] = React.useState(false);
+    const [bathdropdownOpen, setbathDropdownOpen] = React.useState(false);
 
     const toggle1 = () => setproDropdownOpen(prevState => !prevState);
     const toggle2 = () => setbankDropdownOpen(prevState => !prevState);
     const toggle3 = () => setuserDropdownOpen(prevState => !prevState);
+    const toggle4 = () => setbadDropdownOpen(prevState => !prevState);
+    const toggle5 = () => setbathDropdownOpen(prevState => !prevState);
 
     const [open, setOpen] = React.useState(false);
 
@@ -180,7 +184,7 @@ import TextField from '@mui/material/TextField';
                                     htmlFor="input-property"
                                     >
                                     What is the property type? 
-                                    </label><br/>
+                                    </label><br/><br/>
                                     <Dropdown isOpen={prodropdownOpen} toggle={toggle1} >
                                         <DropdownToggle caret style={{ width: '150px'}}>Select &nbsp;&nbsp;&nbsp;&nbsp;</DropdownToggle>
                                         <DropdownMenu style={{ width: '200px'}}>
@@ -197,7 +201,7 @@ import TextField from '@mui/material/TextField';
                                     </Dropdown>
                                 </FormGroup>
                             </Col>
-                        </Row>
+                        </Row><br/>
                         <Row>
                             <Col lg="6">
                                 <FormGroup>
@@ -206,7 +210,7 @@ import TextField from '@mui/material/TextField';
                                     htmlFor="input-address"
                                     >
                                     What is the street address?
-                                    </label><br/>
+                                    </label><br/><br/>
                                     <FormGroup>
                                         <label
                                         className="form-control-label"
@@ -224,7 +228,7 @@ import TextField from '@mui/material/TextField';
                                 </FormGroup>
                             </Col>
                         </Row>
-                        <Row>
+                    <Row>
                         <Col lg="4">
                           <FormGroup>
                             <label
@@ -273,7 +277,7 @@ import TextField from '@mui/material/TextField';
                             />
                           </FormGroup>
                         </Col>
-                      </Row>
+                    </Row>
                             
                       
                     </div>
@@ -292,7 +296,7 @@ import TextField from '@mui/material/TextField';
                               htmlFor="input-address"
                             >
                               Who is the property owner?
-                            </label><br/>
+                            </label><br/><br/>
                             <label className="label2" style={{fontSize:'0.7rem'}}>This information wiil be used to help prepare owner drawns and 1099s.</label><br/>
                             <span
                                 onClick={handleClickOpen}
@@ -417,58 +421,7 @@ import TextField from '@mui/material/TextField';
                           </FormGroup>
                         </Col>
                       </Row>
-                      {/* <Row>
-                        <Col lg="4">
-                          <FormGroup>
-                            <label
-                              className="form-control-label"
-                              htmlFor="input-city"
-                            >
-                              City
-                            </label>
-                            <Input
-                              className="form-control-alternative"
-                              defaultValue="New York"
-                              id="input-city"
-                              placeholder="City"
-                              type="text"
-                            />
-                          </FormGroup>
-                        </Col>
-                        <Col lg="4">
-                          <FormGroup>
-                            <label
-                              className="form-control-label"
-                              htmlFor="input-country"
-                            >
-                              Country
-                            </label>
-                            <Input
-                              className="form-control-alternative"
-                              defaultValue="United States"
-                              id="input-country"
-                              placeholder="Country"
-                              type="text"
-                            />
-                          </FormGroup>
-                        </Col>
-                        <Col lg="4">
-                          <FormGroup>
-                            <label
-                              className="form-control-label"
-                              htmlFor="input-country"
-                            >
-                              Postal code
-                            </label>
-                            <Input
-                              className="form-control-alternative"
-                              id="input-postal-code"
-                              placeholder="Postal code"
-                              type="number"
-                            />
-                          </FormGroup>
-                        </Col>
-                      </Row> */}
+                     
                     </div>
                     <hr className="my-4" />
                     {/* Address */}
@@ -481,7 +434,7 @@ import TextField from '@mui/material/TextField';
                                     htmlFor="input-property"
                                     >
                                     What is the property's primary bank account? 
-                                    </label><br/>
+                                    </label><br/><br/>
                         <Row>
                             <Col lg="6">
                                 <FormGroup>
@@ -504,7 +457,7 @@ import TextField from '@mui/material/TextField';
                                         </DropdownMenu>
                                     </Dropdown>
                                 </FormGroup>
-                            </Col>
+                            </Col><br/>
                             <Col lg="6">
                                 <FormGroup>
                                     <label
@@ -523,7 +476,7 @@ import TextField from '@mui/material/TextField';
                                     </FormGroup>
                                 </FormGroup>
                             </Col>
-                        </Row> 
+                        </Row> <br/>
                         <Row>
                         <Col md="12">
                           <FormGroup>
@@ -532,7 +485,7 @@ import TextField from '@mui/material/TextField';
                               htmlFor="input-address"
                             >
                               Who will be the primary manager of this property?
-                            </label><br/>
+                            </label><br/><br/>
                             <label className="label2" style={{fontSize:'0.7rem'}}>If the staff member has not yet been added as a user in your account,they can be added to the account,then as the manager later through the property's summary details.</label><br/>
                             <label
                                     className="form-control-label"
@@ -557,27 +510,148 @@ import TextField from '@mui/material/TextField';
                         </Col>
                       </Row>
                     </div>
-                    
-
-
-                    
+    
                     <hr className="my-4" />
                     {/* Description */}
-                    <h6 className="heading-small text-muted mb-4">About me</h6>
-                    {/* <div className="pl-lg-4">
+                    <h6 className="heading-small text-muted mb-4">Unit</h6>
+                    <div className="pl-lg-4">
                       <FormGroup>
-                        <label>About Me</label>
-                        <Input
-                          className="form-control-alternative"
-                          placeholder="A few words about you ..."
-                          rows="4"
-                          defaultValue="A beautiful Dashboard for Bootstrap 4. It is Free and
-                          Open Source."
-                          type="textarea"
-                        />
+                      <label
+                            className="form-control-label"
+                            htmlFor="input-address"
+                        >
+                            Enter Units
+                        </label><br/><br/>
+                        <Row>
+                        <Col lg="2">
+                          <FormGroup>
+                            <label
+                              className="form-control-label"
+                              htmlFor="input-city"
+                            >
+                              Units *
+                            </label>
+                            <Input
+                              className="form-control-alternative"
+                              id="input-unit"
+                              placeholder="102"
+                              type="number"
+                            />
+                          </FormGroup>
+                        </Col>
+                        <Col lg="4">
+                          <FormGroup>
+                            <label
+                              className="form-control-label"
+                              htmlFor="input-unitadd"
+                            >
+                              Unit Address *
+                            </label>
+                            <Input
+                              className="form-control-alternative"
+                              id="input-unitadd"
+                              placeholder="A12 Bhaskar Enclave, Phase 2 - 102"
+                              type="text"
+                            />
+                          </FormGroup>
+                        </Col>
+                        <Col lg="4">
+                          <FormGroup>
+                            <label
+                              className="form-control-label"
+                              htmlFor="input-country"
+                            >
+                              Rooms
+                            </label><br/>
+                                <Dropdown isOpen={baddropdownOpen} toggle={toggle4} >
+                                        <DropdownToggle caret style={{ width: '100%'}}>6 Bed &nbsp;&nbsp;</DropdownToggle>
+                                        <DropdownMenu style={{ width: '200px'}}>
+                                            <DropdownItem>2 Bed</DropdownItem>
+                                            <DropdownItem>3 Bed</DropdownItem>
+                                            <DropdownItem>4 Bed</DropdownItem>
+                                            <DropdownItem>5 Bed</DropdownItem>
+                                            <DropdownItem>6 Bed</DropdownItem>
+                                            <DropdownItem>7 Bed</DropdownItem>
+                                        </DropdownMenu>
+                                </Dropdown>&nbsp; &nbsp;
+                                <Dropdown isOpen={bathdropdownOpen} toggle={toggle5} >
+                                        <DropdownToggle caret style={{ width: '100%'}}>5 Bath &nbsp;&nbsp;</DropdownToggle>
+                                        <DropdownMenu style={{ width: '200px'}}>
+                                            <DropdownItem>2 Bath</DropdownItem>
+                                            <DropdownItem>3 Bath</DropdownItem>
+                                            <DropdownItem>4 Bath</DropdownItem>
+                                            <DropdownItem>5 Bath</DropdownItem>
+                                            <DropdownItem>6 Bath</DropdownItem>
+                                            <DropdownItem>7 Bath</DropdownItem>
+                                        </DropdownMenu>
+                                </Dropdown>
+                          </FormGroup>
+                        </Col>
+                        <Col lg="2">
+                          <FormGroup>
+                            <label
+                              className="form-control-label"
+                              htmlFor="input-unitadd"
+                            >
+                              Soft
+                            </label>
+                            <Input
+                              className="form-control-alternative"
+                              id="input-unitadd"
+                              placeholder="3000"
+                              type="number"
+                            />
+                          </FormGroup>
+                        </Col>
+                        
+                        {/* <Col xs="8">
+                        <h3 className="mb-0">New Property</h3>
+                        </Col> */}
+                        {/* <Col className="text-right" xs="4">
+                        <Button
+                            color="primary"
+                            href="#pablo"
+                            onClick={(e) => e.preventDefault()}
+                            size="sm"
+                        >
+                            Add Lease
+                        </Button>
+                        </Col> */}
+                  
+                    </Row>
+                        
                       </FormGroup>
-                    </div> */}
-                  </Form>
+                    </div>
+                    
+                        <Button
+                            color="primary"
+                            href="#pablo"
+                            onClick={(e) => e.preventDefault()}
+                            size="sm"
+                            style={{background:'white',color:'black'}}
+                        >
+                            Add another unit
+                        </Button>
+                       
+                  </Form><br/><br/>
+                    <Button
+                            color="primary"
+                            href="#pablo"
+                            onClick={(e) => e.preventDefault()}
+                            size="sm"
+                            style={{background:'green'}}
+                        >
+                            Create Property
+                        </Button>
+                        <Button
+                            color="primary"
+                            href="#pablo"
+                            onClick={(e) => e.preventDefault()}
+                            size="sm"
+                            style={{background:'white',color:'black'}}
+                        >
+                            Cancel
+                        </Button>
                 </CardBody>
               </Card>
             </Col>
